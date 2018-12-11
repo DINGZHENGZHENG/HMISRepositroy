@@ -1,7 +1,7 @@
 package com.hellojava.entiy;
 
 
-
+//dz
 public class Bed {
 	private int bedId;
 	private int bedPrice;
