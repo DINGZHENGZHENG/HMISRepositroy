@@ -2,8 +2,16 @@ package com.hellojava.entiy;
 
 
 
+
 /**
- * @author Administrator
+ * 
+ * @ClassName: Bed
+ * @Description: TODO
+ * 
+ *
+ * @Version: V_1.0
+ * @Data: 2018-12-11
+ * @author: Victor Woods
  *
  */
 public class Bed {
