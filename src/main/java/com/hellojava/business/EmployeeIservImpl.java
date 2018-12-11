@@ -10,13 +10,13 @@ public class EmployeeIservImpl implements EmployeeIserv {
 	public EmployeeIservImpl() {
 		ed=new EmployeeDao();
 	}
+	
 	public boolean loginCheckEmployee(Employee empl) {
 		boolean bool=false;
 	 try {
 		Employee em=ed.empQuery( empl);
 		if(em!=null) {
 			bool=true;
-			System.out.println("HH");
 		}
 	} catch (SQLException e) {
 		

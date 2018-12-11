@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 import com.hellojava.database.tools.DatabaseUtil;
 
 /**
@@ -46,6 +48,7 @@ public class DBManager {
 	public int update(Connection c,String sql,Object...obs) throws SQLException {
 		int count=0;
 		if(c!=null&&!c.isClosed()) {
+			System.out.println("dani");
 			PreparedStatement ps=c.prepareStatement(sql);
 			if(obs!=null) {
 				for (int i = 0; i < obs.length; i++) {

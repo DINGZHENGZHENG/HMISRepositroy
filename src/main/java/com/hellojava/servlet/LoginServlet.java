@@ -43,22 +43,21 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		String EmpId= request.getParameter("EmpId"); 
-		int id=Integer.parseInt(EmpId);
+		String EmpName= request.getParameter("userName"); 
 		String password=request.getParameter("userPwd");
-		System.out.println(EmpId);
-		System.out.println(password);
+//        System.out.println(EmpName);
+//		System.out.println(password);
 		boolean boo=false;
 		if(password!=null) {
 		  Employee emp= new Employee();
-		  emp.setEmpId(id);
-		  emp.setPassword("password");
+		  emp.setEmpName(EmpName);
+		  emp.setPassword(password);
 		 EmployeeIserv emi= new EmployeeIservImpl();
 		 boo=emi.loginCheckEmployee(emp);
 		}
 		response.setCharacterEncoding("utf-8");
 	 if(boo) {
-		 response.sendRedirect("hh.html");
+		 response.sendRedirect("inner/main.html");
 	 }else {
 		 response.sendRedirect("inner/bed.html");
 	 }

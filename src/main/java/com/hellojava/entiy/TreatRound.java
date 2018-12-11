@@ -14,7 +14,7 @@ package com.hellojava.entiy;
 public class TreatRound {
 	//私有属性
 	private int treId;
-	private String treItems;
+	private String TreName;
 	private float trePrice;
 	//set与get方法
 	public int getTreId() {
@@ -23,11 +23,12 @@ public class TreatRound {
 	public void setTreId(int treId) {
 		this.treId = treId;
 	}
-	public String getTreItems() {
-		return treItems;
+
+	public String getTreName() {
+		return TreName;
 	}
-	public void setTreItems(String treItems) {
-		this.treItems = treItems;
+	public void setTreName(String treName) {
+		TreName = treName;
 	}
 	public float getTrePrice() {
 		return trePrice;

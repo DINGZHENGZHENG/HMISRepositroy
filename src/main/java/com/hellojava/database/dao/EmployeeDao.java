@@ -37,7 +37,7 @@ public class EmployeeDao {
 	/**
 	 * 
 	 * @Title: empQuery
-	 * @Description: ²éÑ¯ËùÓÐÖ°¹¤ÐÅÏ¢
+	 * @Description: ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½Ï¢
 	 * 
 	 * @param empl
 	 * @return
@@ -47,8 +47,8 @@ public class EmployeeDao {
 	 */
 	public Employee empQuery(Employee empl) throws SQLException {
 		Employee  emp=null;
-		String sql="select *from employee where password=? and EmpId=?";
-		Object[] odObjects= {empl.getPassword(),empl.getEmpId()};
+		String sql="select * from employee where password=? and EmpName=?";
+		Object[] odObjects= {empl.getPassword(),empl.getEmpName()};
 		Connection conn=  idb.openConnection();
 		ResultSet rs= idb.query(conn, sql, odObjects);
 		if(rs.next()) {
@@ -70,7 +70,7 @@ public class EmployeeDao {
      * @throws SQLException 
      * 
      * @Title: addEmployee
-     * @Description: Ìí¼ÓÖ°¹¤ÈËÔ±ÐÅÏ¢
+     * @Description: ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ï¢
      * 
      * @param emp
      * @return int
@@ -89,7 +89,7 @@ public class EmployeeDao {
      * @throws SQLException 
      * 
      * @Title: updateEmployee
-     * @Description: ÐÞ¸ÄÖ°¹¤ÐÅÏ¢
+     * @Description: ï¿½Þ¸ï¿½Ö°ï¿½ï¿½ï¿½ï¿½Ï¢
      * 
      * @param emp
      * @return int
@@ -107,7 +107,7 @@ public class EmployeeDao {
     /**
      * 
      * @Title: deleteEmployee
-     * @Description: É¾³ýÖ°¹¤ÈËÔ±ÐÅÏ¢
+     * @Description: É¾ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ï¢
      * 
      * @param emp
      * @return

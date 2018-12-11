@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 
  * @ClassName: Patient
- * @Description: ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
+ * @Description: ²¡ÈË»ù±¾ĞÅÏ¢±íµÄÊµÌåÀà
  * 
  *
  * @Version: V_1.0
@@ -15,10 +15,9 @@ import java.util.Date;
  * @author: Victor Woods
  *
  */
-//DZZ
 public class Patient {
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¶¨ÒåµÄË½ÓĞÊôĞÔ
 	 * */
 	private  int userId;
 	private  String medicalId;
@@ -51,7 +50,7 @@ public class Patient {
 	private  String payWay;
 	
 	/**
-	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½setï¿½ï¿½getï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½Ôµï¿½Öµ
+	 * ²¡ÈËĞÅÏ¢ÊµÌåÀàµÄÊôĞÔµÄsetÓëget·½·¨£¬ÓÃÓÚÉèÖÃÓëµÃµ½ÊôĞÔµÄÖµ
 	 */
 	public int getUserId() {
 		return userId;
