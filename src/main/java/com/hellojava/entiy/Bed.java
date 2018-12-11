@@ -12,7 +12,7 @@ package com.hellojava.entiy;
  * @Version: V_1.0
  * @Data: 2018-12-11
  * @author: Victor Woods
- *sqxls
+ *ydrt
  */
 public class Bed {
 	private int bedId;
