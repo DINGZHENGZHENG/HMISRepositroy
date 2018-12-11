@@ -1,7 +1,11 @@
 package com.hellojava.entiy;
 
 
-//dzz
+
+/**
+ * @author Administrator
+ *
+ */
 public class Bed {
 	private int bedId;
 	private int bedPrice;
