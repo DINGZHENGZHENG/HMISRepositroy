@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>查看结果</title>
+		<script  charset="utf-8" language="javascript" src="js/clientSideApp.js"></script>
+		<script language=JavaScript type=text/JavaScript>
+			function windowOpen(theURL,winName,features,width,hight,scrollbars,top,left) { var parameter="top="+top+",left="+left+",width="+width+",height="+hight; if(scrollbars=="no") {parameter+=",scrollbars=no";} else {parameter+=",scrollbars=yes";} window.open(theURL,winName,parameter); }
+		</script>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+
+	<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<br>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="25" align="center" valign="bottom" class="td06">
+					<table width="98%" border="0" cellspacing="3" cellpadding="0">
+						<tr>
+							<td width="15"><img src="css/images/2-2.gif" width="9" height="9"></td>
+							<td valign="bottom"><span class="title">押金管理</span></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<form name="form1" method="post" action="">
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" class="table01" bgcolor="#5DA0DC">
+				<tr>
+					<td width="14%" class="td_top">住院号</td>
+					<td width="19%" class="td_top">患者姓名</td>
+					<td width="19%" class="td_top">性别</td>
+					<td width="17%" class="td_top">所属科室</td>
+					<td width="17%" class="td_top">押金金额</td>
+					<td width="12%" class="td_top">余额</td>
+				</tr>
+				<tr>
+					<td class="td07">1004</td>
+					<td class="td07">张三</td>
+					<td class="td07">男</td>
+					<td class="td07">骨科</td>
+					<td class="td07">1000</td>
+					<td class="td07">0</td>
+				</tr>
+				<tr>
+					<td class="td07">1314</td>
+					<td class="td07">珂珂</td>
+					<td class="td07">女</td>
+					<td class="td07">牙科</td>
+					<td class="td07">7800</td>
+					<td class="td07">-51</td>
+				</tr>
+				<tr>
+					<td class="td07">1241</td>
+					<td class="td07">胖胖</td>
+					<td class="td07">男</td>
+					<td class="td07">牙科</td>
+					<td class="td07">2000</td>
+					<td class="td07">10</td>
+				</tr>
+				<tr>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+				</tr>
+				<tr>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+					<td class="td07">xxx</td>
+				</tr>
+			</table>
+			<br>
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td align="right"><input name="Submit" type="submit" class="buttonface02" value="发送消息" onClick="javascript:openwindow.location.href='index.htm';">&nbsp;
+						<input name="Submit" type="submit" class="buttonface" value="  取消  ">
+					</td>
+				</tr>
+			</table>
+			<br>
+		</form>
+		</table>
+	</body>
+</html>

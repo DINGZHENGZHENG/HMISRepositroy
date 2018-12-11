@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+		<title>病历管理</title>
+		<link rel="stylesheet" type="text/css" href="css/easyui.css">
+		<link rel="stylesheet" type="text/css" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	</head>
+	<body>
+		<table id="dataGrid" class="easyui-datagrid" title="病历管理" style="width:100%;height:570px;border: solid;"
+				data-options="singleSelect:false,collapsible:true,url:'http://localhost:8080/jquery/loadAllBookServlet',
+					method:'get',pagination:true,pageSize:10,onClickCell: onClickCell,checkOnSelect:$(this).is(':checked'),
+					toolbar:'#tb'">
+			<thead>
+				<tr>
+					<th data-options="field:'hospitalizationId',width:120,checkbox:true">选号</th>
+					<th data-options="field:'hospitalId',width:120,editor:{type:'textbox'}">住院号</th>
+					<th data-options="field:'patientName',width:120,editor:{type:'textbox'}">病人姓名</th>
+					<th data-options="field:'patientSex',width:120,editor:{type:'textbox'}">病人性别</th>
+					<th data-options="field:'patientAge',width:120,editor:{type:'numberbox',options:{precision:2}}">病人年龄</th>
+					<th data-options="field:'patientAddress',width:248,editor:{type:'textbox'}">病人住址</th>
+					<th data-options="field:'hospitalizationTime',width:120,editor:{type:'textbox'}">住院时间</th>
+					<th data-options="field:'department',width:120,editor:{type:'textbox'}">科室</th>
+					<th data-options="field:'doctorId',width:120,editor:{type:'textbox'}">接诊医生</th>
+					<th data-options="field:'case',width:300,editor:{type:'button'}">病历详情</th>
+				</tr>
+			</thead>
+		</table>
+		<div id="tb" style="height:auto">
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="append()">增加</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="removeit()">删除</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search',plain:true" onclick="getChanges()">确认</a>
+		</div>
+		<div style="margin-top: 5px;width:1000px; height:35px;border:solid 1px #95B8E7; border-radius: 5px; background-color: #E6F0FF;">
+			<form id="ff" method="post">
+					<label for="name">住院号</label>  
+	       			<input class="easyui-textbox" style="width:165px;" type="text" name="hospitalizationId" />  
+					<label for="name" style="margin-left: 20px;">病人姓名</label>  
+	       			<input class="easyui-textbox" type="text" style="width: 165px;" name="patientName"/>  
+					<label for="name" style="margin-left: 20px;">住院时间</label>  
+	       			<input class="easyui-textbox" type="text" style="width: 160px;" name="patientSex"/>   
+	       			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px;margin-left: 120px;">过滤</a> 
+	       			<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">重置</a> 
+			</form>
+		</div>
+		</div>
+		<script>
+			function submitForm(){
+				$('#ff').form('submit',{url:'http://localhost:8080/jquery/havingBookServlet',success:function(data){
+					var jsonData=$.parseJSON(data);
+					$('#dataGrid').datagrid('loadData',jsonData);
+				}});
+			}
+			function clearForm(){
+				$('#ff').form('clear');
+			}
+			
+			var editIndex = undefined;
+			function endEditing(){
+				if (editIndex == undefined){return true}
+				if ($('#dataGrid').datagrid('validateRow', editIndex)){
+					$('#dataGrid').datagrid('endEdit', editIndex);
+					editIndex = undefined;
+					return true;
+				} else {
+					return false;
+				}
+			}
+	
+			function onClickCell(index, field){
+				if (editIndex != index){
+					if (endEditing()){
+						$('#dataGrid').datagrid('selectRow', index)
+								.datagrid('beginEdit', index);
+						var ed = $('#dataGrid').datagrid('getEditor', {index:index,field:field});
+						if (ed){
+							($(ed.target).data('textbox') ? $(ed.target).textbox('textbox') : $(ed.target)).focus();
+						}
+						editIndex = index;
+					} else {
+						setTimeout(function(){
+							$('#dataGrid').datagrid('selectRow', editIndex);
+						},0);
+					}
+				}
+			}
+			
+			function append(){
+				if (endEditing()){
+					$('#dataGrid').datagrid('appendRow',{});
+					editIndex = $('#dataGrid').datagrid('getRows').length-1;
+					$('#dataGrid').datagrid('selectRow', editIndex)
+							.datagrid('beginEdit', editIndex);
+				}
+			}
+			
+			function removeit(){
+				var ss = [];
+				var rows = $('#dataGrid').datagrid('getSelections');
+				for(var i=0; i<rows.length; i++){
+					var row = rows[i];
+					ss.push(row.hospitalizationId);
+				}
+				alert(ss);
+				$.post("bookOptionServlet",{bookIds:ss.join('-'),option:"delete"},function(data){
+					if(parseInt(data)==1){
+						$('#dataGrid').datagrid('reload');    
+					}
+				});
+			}
+			
+			function getChanges(){
+				var rows = $('#dataGrid').datagrid('getChanges');
+				var obs=new Object();
+				obs["book"]=JSON.stringify(rows);
+				$.post("updateBook",obs,function(data){
+					if(parseInt(data)==1){
+						$('#dataGrid').datagrid('reload');  
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

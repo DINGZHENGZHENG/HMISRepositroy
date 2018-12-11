@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>病人日结账单</title>
+		<link rel="stylesheet" type="text/css" href="css/easyui.css">
+		<link rel="stylesheet" type="text/css" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	</head>
+	<body>
+			<div id="tb" style="width:100%;padding:15px 0px ; height:10%; background-color: #95B8E7;">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				起始日期:<input class="easyui-datebox" style="width:20%">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				终止日期:<input class="easyui-datebox" style="width:20%">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				住院号：
+				<input class="easyui-numberbox" style="width:160px">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#" class="easyui-linkbutton" iconCls="icon-search">查询</a>
+			</div>
+		
+		<div class="easyui-panel" style="width:100%;  background-color: ;height: 90%;">
+		<div style="margin:10px; ">
+			<table width="100%" height="75%" >
+				
+				<tr >
+					<td width="10%" align="right" >住院号:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >姓名:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >性别:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+				</tr>
+				<tr >
+					<td width="10%" align="right" >科别:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >住院费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >治疗费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+				</tr>
+				<tr >
+					<td width="10%" align="right" >药品费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >化验费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >体检费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					
+				</tr>
+				<tr >
+					<td width="10%" align="right" >专科费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >护理费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" >监护费:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+				</tr>
+				<tr >
+					<td width="10%" align="right" >其他费用:</td>
+					<td width="20%"><input class="easyui-numberbox" value="" da/llta-options="labelPosition:'left',precision:2"></td>
+					<td width="10%" align="right" height="40">结算日期:</td>
+					<td width="20%"><input class="easyui-datebox" value="" data-options="labelPosition:'left',precision:2"></td>
+				</tr>
+				<tr >
+					<td  align="right" >合计:</td>
+					<td  colspan="3" align="left"><input class="easyui-numberbox" value="" data-options="labelPosition:'left',precision:2"></td>
+				</tr>
+				
+			</table>
+		</div>
+		<br />
+		<div style="width:100%;	height:25% ">
+			<table width="100%" style="background-color: #0088CC;">
+				<tr>
+				<td   align="center"><a>押金累计</a>&nbsp;&nbsp;<input type="number"  name=""/></td>
+				<td  align="left"><a>押金余额</a>&nbsp;&nbsp;<input type="number" name="" /></td>
+				</tr>
+			</table>
+		</div>	
+		<br /><br /><br />
+	</div>
+			
+	</body>
+</html>
+ 

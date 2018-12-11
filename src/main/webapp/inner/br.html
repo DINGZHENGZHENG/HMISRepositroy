@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>病人信息表</title>
+	<link rel="stylesheet" type="text/css" href="css/easyui.css">
+	<link rel="stylesheet" type="text/css" href="css/icon.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<form action="" method="get">
+			<h1 align="center"><font size="6"color="0088cc"><b>病人信息表</b></font></h1>
+			<table style="width:100%;height:270;border:solid;color:#0088cc">
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>用戶编号：</b></font></td>
+					<td style="width:35%">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>医疗卡号:</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>病案(门诊号):</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>医疗卡号:</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>收费性质:</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">自费</option>
+							<option value="AK">医保</option>
+						</select>
+					</td>
+					<td style="width:15%"><font size="4"><b>病人姓名:</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>性别：</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">男</option>
+							<option value="AK">女</option>
+						</select>
+					</td style="width:15%">
+					<td><font size="4"><b>民族:</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">汉族</option>
+							<option value="AK">蒙古族</option>
+							<option value="AL">回族</option>
+							<option value="AK">藏族</option>
+							<option value="AL">维吾尔族</option>
+							<option value="AK">苗族</option>
+							<option value="AL">彝族</option>
+							<option value="AK">壮族</option>
+							<option value="AL">布依族</option>
+							<option value="AK">朝鲜族</option>
+							<option value="AL">满族</option>
+							<option value="AK">侗族</option>
+							<option value="AL">瑶族</option>
+							<option value="AK">白族</option>
+							<option value="AL">土家族</option>
+							<option value="AK">哈尼族</option>
+							<option value="AL">哈萨克族</option>
+							<option value="AK">傣族</option>
+							<option value="AL">黎族</option>
+							<option value="AK">傈僳族</option>
+							<option value="AL">佤族</option>
+							<option value="AK">畲族</option>
+							<option value="AL">高山族</option>
+							<option value="AK">拉祜族</option>
+							<option value="AL">水族</option>
+							<option value="AK">东乡族</option>
+							<option value="AL">纳西族</option>
+							<option value="AK">景颇族</option>
+							<option value="AL">柯尔克孜族</option>
+							<option value="AK">土族</option>
+							<option value="AL">达斡尔族</option>
+							<option value="AK">仫佬族</option>
+							<option value="AL">羌族</option>
+							<option value="AK">布朗族</option>
+							<option value="AL">撒拉族</option>
+							<option value="AK">毛南族</option>
+							<option value="AL">仡佬族</option>
+							<option value="AK">锡伯族</option>
+							<option value="AL">阿昌族</option>
+							<option value="AK">普米族</option>
+							<option value="AL">塔吉克族</option>
+							<option value="AK">怒族</option>
+							<option value="AL">乌孜别克族</option>
+							<option value="AK">俄罗斯族</option>
+							<option value="AL">鄂温克族</option>
+							<option value="AK">德昂族</option>
+							<option value="AL">保安族</option>
+							<option value="AK">裕固族</option>
+							<option value="AL">京族</option>
+							<option value="AK">塔塔尔族</option>
+							<option value="AL">独龙族</option>
+							<option value="AK">鄂伦春族</option>
+							<option value="AL">赫哲族</option>
+							<option value="AK">门巴族</option>
+							<option value="AL">珞巴族</option>
+							<option value="AK">基诺族</option>
+						</select>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>是否孕妇：</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">是</option>
+							<option value="AK">否</option>
+						</select>
+					</td>
+					<td style="width:15%"><font size="4"><b>出生日期:</b></font></td>
+					<td>
+						<div style="margin:20px 0;"></div>
+						<input class="easyui-datetimebox" required style="width:200px">
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>年龄：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>体重：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>婚否：</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">已婚</option>
+							<option value="AK">未婚</option>
+						</select>
+					</td>
+					<td style="width:15%"><font size="4"><b>电话号:</b></font></td>
+					<td>
+						<div style="margin:20px 0;"></div>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>籍贯：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>身份证号：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>户口地址：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:100%"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>联系地址：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:100%"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>联系人：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>关系：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>联系人电话号：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>入院时间：</b></font></td>
+					<td>
+						<div style="margin:20px 0;"></div>
+						<input class="easyui-datetimebox" required style="width:200px">
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>诊断1：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:100%"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>诊断2：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:100%"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>科室：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>职工ID：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td style="width:15%"><font size="4"><b>床位号：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td style="width:15%"><font size="4"><b>预交押金：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:100%;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>支付方式：</b></font></td>
+					<td colspan="3">
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">现金</option>
+							<option value="AK">支付宝</option>
+							<option value="AL">微信</option>
+							<option value="AK">银行卡</option>
+							<option value="AK">医保卡</option>
+						</select>
+					</td>
+				</tr>
+				
+			</table>
+		<span style="padding-left: 40%;"><input  type="submit" name="" id="" value="确定" /></span>
+			<span style="padding-left: 20%;"><input type="reset" name="" id="" value="取消" /></span>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>病历表</title>
+		<link rel="stylesheet" type="text/css" href="css/easyui.css">
+		<link rel="stylesheet" type="text/css" href="css/icon.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+	</head>
+	<body>
+		<form action="" method="get">
+			<h1><font size="7"color="0088cc"><b>病历表</b></font></h1>
+			<table style="width:600;height:270;border:solid;color:#0088cc">
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>住院号：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td><font size="4"><b>病历编号：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>编写医生ID：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td><font size="4"><b>编写时间：</b></font></td>
+					<td>
+						<div style="margin:20px 0;"></div>
+						<input class="easyui-datetimebox" required style="width:200px">
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>姓名：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td><font size="4"><b>性别：</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">男</option>
+							<option value="AK">女</option>
+						</select>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>年龄：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+					<td><font size="4"><b>籍贯：</b></font></td>
+					<td>
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:20px;width:200px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>户口/居住地址：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:40px;width:500px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>婚姻：</b></font></td>
+					<td>
+						<select id="state" class="easyui-combobox" name="state" style="width:200px;">
+							<option value="AL">已婚</option>
+							<option value="AK">未婚</option>
+						</select>
+					</td>
+					<td><font size="4"><b>入院时间：</b></font></td>
+					<td>
+						<div style="margin:20px 0;"></div>
+						<input class="easyui-datetimebox" required style="width:200px">
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>主诉：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>现病史：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>既往史：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>个人史：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr style="width:600;height:30;border:solid;color:#0088cc">
+					<td><font size="4"><b>家族史：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td><font size="4"><b>检查结果：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td><font size="4"><b>初步诊断：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+				<tr>
+					<td><font size="4"><b>补充诊断：</b></font></td>
+					<td colspan="3">
+						<input class="easyui-textbox"name="message"data-option="multiline:true"style="height:50px;width:500px"></input>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="确定" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>住院信息管理系统</title>
+<!-- 1、JQuery的js包 -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- 2 css资源 -->
+<link rel="stylesheet" type="text/css" href="css/easyui.css">
+<!-- 3、图标资源 -->
+<link rel="stylesheet" type="text/css" href="css/icon.css">
+<!-- 4、easyui的js包 -->
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+
+<!-- 5、本地语言 -->
+<script type="text/javascript" src="js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+
+$(function(){
+    //创建打开新标签页的按钮     
+    $(".easyui-linkbutton").click(
+            function()
+            {
+                //获取组件的属性或内容
+                var tab_title=$(this).text();
+                var tab_href=$(this).attr("title");
+     
+                if($("#tt").tabs("exists",tab_title))
+                {
+                    $("#tt").tabs("select",tab_title);
+                }
+            else
+                {
+                
+                $("#tt").tabs('add',{
+                    title:tab_title,
+                    closable:true,
+                    href:tab_href
+                })
+                    
+                }
+            });
+        
+    
+
+    
+})
+
+</script>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north',split:false" style="height:80px;">
+    	<img src="img/01.jpg" width="100%" height="100%" />
+    </div>   
+    <div data-options="region:'south',title:'底部 Title',split:true" style="height:100px;"></div>   
+    
+    <div data-options="region:'west',title:'住院信息管理系统',split:true" style="width:150px;">
+    <div id="ac" class="easyui-accordion" data-options="fit:true,selected:0">
+    <div title="住院登记">
+    <a id="add_tab" style="width:100%" title="br.html" href="#" class="easyui-linkbutton">病人信息</a>
+    <a style="width:100%" title="yj.html" href="#" class="easyui-linkbutton">病人押金</a>
+    <br>
+    </div>
+    <div title="病床管理">
+    	<a id="add_tab" style="width:100%"href="#"	title="bed.html" class="easyui-linkbutton">病床管理</a>
+    </div>
+    <div title="处方管理">
+    	<a id="add_tab" style="width:100%"href="#" title="cf.html" class="easyui-linkbutton">处方管理</a>
+    </div>
+     <div title="病历管理">
+    	<a id="add_tab" style="width:100%"href="#" title="bl.html"class="easyui-linkbutton">病历管理</a>
+    </div>
+     <div title="费用管理">
+    	<a id="add_tab" style="width:100%"href="#"title="checkday.html" class="easyui-linkbutton">病人日结账单</a>
+    	<a id="add_tab" style="width:100%"href="#" title="rijieb.html" class="easyui-linkbutton">医院日结账单</a>
+    </div>
+    <div title="出院管理">
+    	<a id="add_tab" style="width:100%"href="#" title="cy.html" class="easyui-linkbutton">出院管理</a>
+    </div>
+    </div>    
+    </div>   
+    <div data-options="region:'center',title:'主窗口'" style="padding:5px;background:#eee;" class="easyui-layout">
+    <div id="tt" class="easyui-tabs" data-options="fit:true">   
+  
+     
+</div>  
+    
+    
+    </div> 
+       
+</body>
+</html>
