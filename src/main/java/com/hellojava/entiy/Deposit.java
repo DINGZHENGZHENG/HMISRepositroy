@@ -3,7 +3,7 @@ package com.hellojava.entiy;
 /**
  * 
  * @ClassName: Deposit
- * @Description:Ô¤½»Ñº½ðÊµÌåÀà
+ * @Description:Ô¤ï¿½ï¿½Ñºï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
  * 
  *
  * @Version: V_1.0
@@ -12,13 +12,13 @@ package com.hellojava.entiy;
  *
  */
 public class Deposit {
-	//Ë½ÓÐÊôÐÔ
+	//Ë½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private int userId;
 	private String cardId;
 	private float deposit;
 	private float account;
 	
-	//setÓëget·½·¨
+	//setï¿½ï¿½getï¿½ï¿½ï¿½ï¿½
 	public int getUserId() {
 		return userId;
 	}
