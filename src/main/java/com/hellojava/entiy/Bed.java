@@ -4,13 +4,19 @@ package com.hellojava.entiy;
 /**
  * 
  * @ClassName: Bed
- * @Description:床位表的实体类bed
+ * @Description:锟斤拷位锟斤拷锟绞碉拷锟斤拷锟絙ed
  * 
  *
  * @Version: V_1.0
  * @Data: 2018-12-07
  * @author: Victor Woods
+ * @Description: TODO
+ * 
  *
+ * @Version: V_1.0
+ * @Data: 2018-12-11
+ * @author: Victor Woods
+ *ydrt
  */
 public class Bed {
 	private int bedId;
@@ -18,7 +24,7 @@ public class Bed {
 	private String depName;
 	private String bedState;
 	private String sort;
-	/** 实体属性的set与get方法，用于获取与设置属性的值*/
+	/** 实锟斤拷锟斤拷锟皆碉拷set锟斤拷get锟斤拷锟斤拷锟斤拷锟斤拷锟节伙拷取锟斤拷锟斤拷锟斤拷锟斤拷锟皆碉拷值*/
 	public String getSort() {
 		return sort;
 	}
