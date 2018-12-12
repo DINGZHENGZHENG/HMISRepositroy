@@ -2,16 +2,6 @@ package com.hellojava.entiy;
 
 
 /**
- * 
- * @ClassName: Bed
- * @Description:��λ���ʵ����bed
- * 
- *
- * @Version: V_1.0
- * @Data: 2018-12-07
- * @author: Victor Woods
- * @Description: TODO
- * 
  *
  * @Version: V_1.0
  * @Data: 2018-12-11
